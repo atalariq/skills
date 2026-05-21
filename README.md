@@ -24,12 +24,12 @@ setup-skills  →  grill-with-docs  →  to-prd  →  api-design-review  →  ve
 ```
 
 1. **[`setup-skills`](skills/setup/SKILL.md)** — Initialize project structure: issue tracker, triage labels, domain doc layout. Run once per repo.
-2. **[`grill-with-docs`](skills/planning/grill-with-docs/SKILL.md)** — Stress-test your plan against the domain model, sharpen terminology, update `CONTEXT.md` inline as decisions crystallize.
-3. **[`to-prd`](skills/planning/to-prd/SKILL.md)** — Synthesize a PRD from the conversation context and publish it to your issue tracker.
-4. **[`api-design-review`](skills/architecture/api-design-review/SKILL.md)** — Verify API design decisions before issues are created (naming, HTTP semantics, auth, pagination, error format).
-5. **[`vertical-slice`](skills/coding/vertical-slice/SKILL.md)** — Enforcement gate: ensure every issue is a true vertical slice before publishing.
-6. **[`to-issues`](skills/planning/to-issues/SKILL.md)** — Break the PRD into independently-grabbable issues using tracer-bullet vertical slices (HITL vs AFK).
-7. **[`tdd`](skills/coding/tdd/SKILL.md)** — Implement each issue with RED-GREEN-REFACTOR. Test behavior, not implementation. TS examples + Go appendix.
+2. **[`grill-with-docs`](skills/grill-with-docs/SKILL.md)** — Stress-test your plan against the domain model, sharpen terminology, update `CONTEXT.md` inline as decisions crystallize.
+3. **[`to-prd`](skills/to-prd/SKILL.md)** — Synthesize a PRD from the conversation context and publish it to your issue tracker.
+4. **[`api-design-review`](skills/api-design-review/SKILL.md)** — Verify API design decisions before issues are created (naming, HTTP semantics, auth, pagination, error format).
+5. **[`vertical-slice`](skills/vertical-slice/SKILL.md)** — Enforcement gate: ensure every issue is a true vertical slice before publishing.
+6. **[`to-issues`](skills/to-issues/SKILL.md)** — Break the PRD into independently-grabbable issues using tracer-bullet vertical slices (HITL vs AFK).
+7. **[`tdd`](skills/tdd/SKILL.md)** — Implement each issue with RED-GREEN-REFACTOR. Test behavior, not implementation. TS examples + Go appendix.
 
 ## All Skills
 
@@ -41,34 +41,34 @@ setup-skills  →  grill-with-docs  →  to-prd  →  api-design-review  →  ve
 ### Planning
 | Skill | Description |
 |-------|-------------|
-| [`grill-me`](skills/planning/grill-me/SKILL.md) | Grilling session — interview relentlessly about a plan or design. |
-| [`grill-with-docs`](skills/planning/grill-with-docs/SKILL.md) | Grilling + update CONTEXT.md and ADRs inline as decisions crystallize. |
-| [`to-prd`](skills/planning/to-prd/SKILL.md) | Synthesize PRD from conversation context → publish to issue tracker. |
-| [`to-issues`](skills/planning/to-issues/SKILL.md) | Break PRD into vertical slice issues (tracer bullets). |
+| [`grill-me`](skills/grill-me/SKILL.md) | Grilling session — interview relentlessly about a plan or design. |
+| [`grill-with-docs`](skills/grill-with-docs/SKILL.md) | Grilling + update CONTEXT.md and ADRs inline as decisions crystallize. |
+| [`to-prd`](skills/to-prd/SKILL.md) | Synthesize PRD from conversation context → publish to issue tracker. |
+| [`to-issues`](skills/to-issues/SKILL.md) | Break PRD into vertical slice issues (tracer bullets). |
 
 ### Coding
 | Skill | Description |
 |-------|-------------|
-| [`tdd`](skills/coding/tdd/SKILL.md) | RED-GREEN-REFACTOR loop. TS examples + Go appendix. |
-| [`vertical-slice`](skills/coding/vertical-slice/SKILL.md) | Pre-publish checklist: verify every issue is a true vertical slice. |
+| [`tdd`](skills/tdd/SKILL.md) | RED-GREEN-REFACTOR loop. TS examples + Go appendix. |
+| [`vertical-slice`](skills/vertical-slice/SKILL.md) | Pre-publish checklist: verify every issue is a true vertical slice. |
 
 ### Architecture
 | Skill | Description |
 |-------|-------------|
-| [`improve-codebase-architecture`](skills/architecture/improve-codebase-architecture/SKILL.md) | Surface architectural friction, propose deepening opportunities — with HTML report. |
-| [`api-design-review`](skills/architecture/api-design-review/SKILL.md) | Checklist-based API design review: naming, HTTP semantics, errors, auth, pagination. |
+| [`improve-codebase-architecture`](skills/improve-codebase-architecture/SKILL.md) | Surface architectural friction, propose deepening opportunities — with HTML report. |
+| [`api-design-review`](skills/api-design-review/SKILL.md) | Checklist-based API design review: naming, HTTP semantics, errors, auth, pagination. |
 
 ### DevOps
 | Skill | Description |
 |-------|-------------|
-| [`setup-ci`](skills/devops/setup-ci/SKILL.md) | `🚧 Deferred` — scaffold CI pipeline for Go or TypeScript/Bun. |
-| [`dockerfile-review`](skills/devops/dockerfile-review/SKILL.md) | `🚧 Deferred` — Dockerfile review checklist. |
-| [`infra-grill`](skills/devops/infra-grill/SKILL.md) | `🚧 Deferred` — infrastructure decision grilling. |
+| [`setup-ci`](skills/setup-ci/SKILL.md) | `🚧 Deferred` — scaffold CI pipeline for Go or TypeScript/Bun. |
+| [`dockerfile-review`](skills/dockerfile-review/SKILL.md) | `🚧 Deferred` — Dockerfile review checklist. |
+| [`infra-grill`](skills/infra-grill/SKILL.md) | `🚧 Deferred` — infrastructure decision grilling. |
 
 ### Git
 | Skill | Description |
 |-------|-------------|
-| [`git-guardrails`](skills/git/git-guardrails/SKILL.md) | Block destructive git commands — Opencode plugin (.ts) + Hermes shell hook (.sh). |
+| [`git-guardrails`](skills/git-guardrails/SKILL.md) | Block destructive git commands — Opencode plugin (.ts) + Hermes shell hook (.sh). |
 
 ## Quick Walkthrough
 
@@ -200,7 +200,7 @@ ln -s $(pwd)/skills/planning/grill-me ~/.config/opencode/skills/grill-me
 # ... repeat for each skill
 
 # Or install as OpenCode plugins (for git-guardrails)
-cp skills/git/git-guardrails/opencode-block-dangerous-git.ts .opencode/plugins/git-guardrails.ts
+cp skills/git-guardrails/opencode-block-dangerous-git.ts .opencode/plugins/git-guardrails.ts
 ```
 
 ### Hermes Agents
@@ -214,7 +214,7 @@ ln -s $(pwd)/skills/planning/grill-me ~/.hermes/skills/grill-me
 # ... repeat for each skill
 
 # Configure git-guardrails hook
-chmod +x skills/git/git-guardrails/hermes-block-dangerous-git.sh
+chmod +x skills/git-guardrails/hermes-block-dangerous-git.sh
 # Add to ~/.hermes/config.yaml hooks block
 ```
 
