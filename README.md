@@ -70,6 +70,12 @@ setup-skills  →  grill-with-docs  →  to-prd  →  api-design-review  →  ve
 |-------|-------------|
 | [`git-guardrails`](skills/git-guardrails/SKILL.md) | Block destructive git commands — Opencode plugin (.ts) + Hermes shell hook (.sh). |
 
+### Productivity
+| Skill | Description |
+|-------|-------------|
+| [`handoff`](skills/handoff/SKILL.md) | Compact the current conversation into a handoff document for the next session. |
+| [`manage-skills`](skills/manage-skills/SKILL.md) | Create new skills, review existing ones, or get grilled on skill design. |
+
 ## Quick Walkthrough
 
 Here's a hands-on example of using these skills end-to-end for a new backend feature.
@@ -231,8 +237,10 @@ Several skills adapted from [mattpocock/skills](https://github.com/mattpocock/sk
 | `to-issues` | adapted (`/setup-skills` + auto-run fallback) |
 | `tdd` | adapted (Go appendix added) |
 | `improve-codebase-architecture` | adapted (cross-refs fixed, Explore generalized) |
+| `handoff` | direct copy (already generic) |
+| `manage-skills` | expanded from `write-a-skill` (added review + grill modes) |
 
-Custom skills: `vertical-slice`, `api-design-review`, `git-guardrails`, DevOps placeholders.
+Original skills: `vertical-slice`, `api-design-review`, `git-guardrails`, `manage-skills`, DevOps placeholders.
 
 ## License
 
